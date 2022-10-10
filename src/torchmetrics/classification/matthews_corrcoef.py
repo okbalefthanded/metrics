@@ -276,7 +276,7 @@ class MatthewsCorrCoef(Metric):
 
     def __new__(
         cls,
-        num_classes: int,
+        num_classes: int = 2, # quick hack
         threshold: float = 0.5,
         task: Optional[Literal["binary", "multiclass", "multilabel"]] = None,
         num_labels: Optional[int] = None,
@@ -310,7 +310,7 @@ class MatthewsCorrCoef(Metric):
 
     def __init__(
         self,
-        num_classes: int,
+        num_classes: int = 2,
         threshold: float = 0.5,
         **kwargs: Any,
     ) -> None:
